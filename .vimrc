@@ -17,7 +17,7 @@ set ruler               " Ruler on
 set nu                  " Line numbers on
 set timeoutlen=220      " Time to wait after hitting ESC (default causes annoying delay)
 set nowrap " Disable line wrap. Will set on per-file basis
- 
+
 " AESTHETICS 
 let g:solarized_termcolors=256
 set t_Co=256 " 256bit color 
@@ -29,8 +29,6 @@ highlight clear Search
 highlight Search term=reverse cterm=bold ctermbg=1 guifg=white guibg=hotpink1
  
 
-
-
 " BACKUPS & TMP FILES (dirs must exist, else produces errors on startup) 
 "set backup  " Enable creation of backup file. 
 "set backupdir=/joint/.tmp_files/vim/backups " Where backups will go. 
@@ -39,9 +37,9 @@ highlight Search term=reverse cterm=bold ctermbg=1 guifg=white guibg=hotpink1
  
 " FORMATTING
 set expandtab
-set tabstop=2       " Tabs are 2 spaces
+set tabstop=4       "Tabs are 4 spaces
 set bs=2            " BS over everything in insert mode
-set shiftwidth=2    " Tabs under smart indent  
+set shiftwidth=4    " Tabs under smart indent  
 set autoindent
 set smarttab
  
@@ -75,7 +73,13 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " Reread vim config 
 map <F2>  :source $HOME/.vimrc<CR> 
 nnoremap <F3> :w<CR>
- 
+
+" Get rid of bad habbit and be more vimiomatic
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+
 " Not sure where I found this, but to whoever wrote it: It's brilliant!
 nnoremap <F4> :buffers<CR>:buffer<space>
  
@@ -154,6 +158,7 @@ noremap <C-l> :nohl<CR>
  
 " CODING, AUTO COMMANDS & LANGUAGE SPECIFIC INHERITANCE (ctags TODO)
 "set tags=~/joint/.app_data/vim/tags/
+
  
 " These files will inherit general programming settings 
 autocmd BufRead *.as,*.conf,*.ini,*.c,*.cs,*.asm,*.sql,*.cpp,*.rb,*.js,*.rhtml,*.phtml,*.erb,*.htm,*.html,*.xml,*.css "source /joint/.app_data/vim/inherit/hacking
