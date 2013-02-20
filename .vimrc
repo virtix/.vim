@@ -17,6 +17,7 @@ set ruler               " Ruler on
 set nu                  " Line numbers on
 set timeoutlen=220      " Time to wait after hitting ESC (default causes annoying delay)
 set nowrap " Disable line wrap. Will set on per-file basis
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " AESTHETICS 
 let g:solarized_termcolors=256
