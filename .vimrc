@@ -20,14 +20,19 @@ set nowrap " Disable line wrap. Will set on per-file basis
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " AESTHETICS 
+" two colorshecmes
 let g:solarized_termcolors=256
+colorscheme solarized
+" let g:molokai_original=1
+" colorscheme molokai
 set t_Co=256 " 256bit color 
 set ch=2 " command line 2 lines high
-colorscheme solarized
 set background=dark
 syntax enable 
 highlight clear Search
 highlight Search term=reverse cterm=bold ctermbg=1 guifg=white guibg=hotpink1
+" Color for column marker (80..999)
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
  
 
 " BACKUPS & TMP FILES (dirs must exist, else produces errors on startup) 
@@ -52,6 +57,7 @@ set list
 set novisualbell    
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line. 
+let &colorcolumn=join( range(81,999), "," )
  
 " Show $ at end-of-line, ~ for trailing spaces, and > or < when line is off 
 "set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:< "bad
