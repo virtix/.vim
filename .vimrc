@@ -17,6 +17,12 @@ set ruler               " Ruler on
 set nu                  " Line numbers on
 set timeoutlen=220      " Time to wait after hitting ESC (default causes annoying delay)
 set nowrap " Disable line wrap. Will set on per-file basis
+" set wrap
+set linebreak
+" set nolist
+set textwidth=80
+" set wrapmargin=8
+set formatoptions+=tcq
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " AESTHETICS 
