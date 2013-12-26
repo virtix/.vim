@@ -15,7 +15,7 @@ set history=256         " Number of things to remember in history.
 set autowrite           " Writes on make/shell commands
 set ruler               " Ruler on
 set nu                  " Line numbers on
-set timeoutlen=220      " Time to wait after hitting ESC (default causes annoying delay)
+set timeoutlen=1000      " Time to wait after hitting ESC (default causes annoying delay)
 set nowrap " Disable line wrap. Will set on per-file basis
 " set wrap
 set linebreak
@@ -39,7 +39,7 @@ highlight clear Search
 highlight Search term=reverse cterm=bold ctermbg=1 guifg=white guibg=hotpink1
 " Color for column marker (80..999)
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
- 
+
 
 " BACKUPS & TMP FILES (dirs must exist, else produces errors on startup) 
 "set backup  " Enable creation of backup file. 
